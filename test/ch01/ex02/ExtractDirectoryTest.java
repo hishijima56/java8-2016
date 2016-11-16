@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -45,15 +46,11 @@ public class ExtractDirectoryTest {
      */
     private static final boolean ISWINDOWS = "\\".equals(System.getProperty("file.separator"));
 
-    /**
-     * ベースディレクトリ
-     */
-    private File baseDir;
 
     /**
      * 単体テスト用ディレクトリ作製
      */
-    private File testDir;
+    private static File testDir;
 
     private File[] expected = new File[3];
 
@@ -83,6 +80,13 @@ public class ExtractDirectoryTest {
             e.printStackTrace();
         }
         extractDirectory = new ExtractDirectory();
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass(){
+        //テスト時に作製したフォルダ・ファイルを削除します。
+        Arrays.stream(testDir.listFiles()).forEach(File::delete);
+        testDir.delete();
     }
 
 
