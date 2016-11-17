@@ -26,7 +26,7 @@ public class RandomNumberGenerator {
      * @return 乱数ストリーム
      */
     public static Stream<Long> getRundomNumberStream(long a, long c, long m, long seed) {
-        return Stream.iterate(seed, x -> (a * x + c) % m);
+        return Stream.iterate(seed, x -> (a * x + c) % m).skip(1);
     }
 
     /**
