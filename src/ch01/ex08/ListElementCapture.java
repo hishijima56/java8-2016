@@ -3,10 +3,6 @@
  * $Revision: $
  * $Date: $
 */
-/*
- * Copyrightℂ RICOH JAPAN Corporation.
- * All Rights Reserved.
-*/
 package ch01.ex08;
 
 import java.util.ArrayList;
@@ -14,7 +10,7 @@ import java.util.List;
 
 /**
  * 練習問題01_08
- * @author リコージャパン株式会社 石嶋 秀敏
+ * @author Hidetoshi Ishijima
  *
  * @version $Revision: $ $Date: $
  * @since 2016/11/16

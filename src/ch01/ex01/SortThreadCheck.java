@@ -3,18 +3,13 @@
  * $Revision: $
  * $Date: $
 */
-/*
- * Copyrightℂ RICOH JAPAN Corporation.
- * All Rights Reserved.
-*/
 package ch01.ex01;
 
 import java.util.Arrays;
 
 /**
  * 練習問題01_01
- *
- * @author リコージャパン株式会社 石嶋 秀敏
+ * @author Hidetoshi Ishijima
  *
  * @version $Revision: $ $Date: $
  * @since 2016/11/13
