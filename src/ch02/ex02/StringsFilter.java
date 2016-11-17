@@ -45,7 +45,6 @@ public class StringsFilter {
     public static void main(String[] args) {
         String contents;
         try {
-            System.out.println();
             contents = new String(Files.readAllBytes(Paths.get(".\\src\\ch02\\ex01\\alice.txt")), StandardCharsets.UTF_8);
             List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
             System.out.println("*********lengthFilter start*********");
