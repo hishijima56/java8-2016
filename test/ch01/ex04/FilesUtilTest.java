@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import org.junit.AfterClass;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -32,9 +32,9 @@ public class FilesUtilTest {
     private static final String PATH_TARGET_DIRECTORY_WINDOWS = "C:\\";
 
     /**
-     * テストフォルダパス(Linux用)
+     * テストフォルダパス(Linux・UNIX用)
      */
-    private static final String PATH_TARGET_DIRECTORY_LINUX = "/root/";
+    private static final String PATH_TARGET_DIRECTORY_LINUX = "/tmp/";
 
     private static final String TEST_DIR_NAME = "java8dirTest";
 
@@ -48,23 +48,23 @@ public class FilesUtilTest {
      */
     private static File testDir;
 
-    private File[] testFiles = new File[5];
+    private static File[] testFiles = new File[5];
 
-    private File[] expected = new File[7];
+    private static File[] expected = new File[7];
 
 
-    private File testFile;
+    private static File testFile;
 
     /**
      * test target
      */
-    private FilesUtil target;
+    private static FilesUtil target;
 
     /**
      * @throws java.lang.Exception
      */
-    @Before
-    public void setUp() throws Exception {
+    @BeforeClass
+    public static void setUpClass() throws Exception {
         target = new FilesUtil();
 
         String testDirPath = (ISWINDOWS ? PATH_TARGET_DIRECTORY_WINDOWS : PATH_TARGET_DIRECTORY_LINUX) + TEST_DIR_NAME;
@@ -115,7 +115,7 @@ public class FilesUtilTest {
      */
     @Test
     public void testSort() {
-
+        //TODO テストケースがたりない
         File[] actual = target.sort(expected);
         Arrays.stream(actual).forEach(System.out::println);
 

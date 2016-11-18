@@ -36,9 +36,9 @@ public class ExtractFilesTest {
     private static final String PATH_TARGET_DIRECTORY_WINDOWS = "C:\\";
 
     /**
-     * テストフォルダパス(Linux用)
+     * テストフォルダパス(Linux・UNIX用)
      */
-    private static final String PATH_TARGET_DIRECTORY_LINUX = "/root/";
+    private static final String PATH_TARGET_DIRECTORY_LINUX = "/tmp/";
 
     private static final String TEST_DIR_NAME = "java8dirTest";
 
