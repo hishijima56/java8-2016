@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * 練習問題02_01
- * @author リコージャパン株式会社 石嶋 秀敏
+ * @author Hidetoshi Ishijima
  *
  * @version $Revision: $ $Date: $
  * @since 2016/11/15
