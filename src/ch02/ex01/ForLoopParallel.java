@@ -3,10 +3,6 @@
  * $Revision: $
  * $Date: $
 */
-/*
- * Copyrightℂ RICOH JAPAN Corporation.
- * All Rights Reserved.
-*/
 package ch02.ex01;
 
 import java.io.IOException;

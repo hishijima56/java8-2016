@@ -23,14 +23,14 @@ public interface I {
     /**
      * デフォルトメソッド
      */
-    default void f(){
-        System.out.println("Interface I#f default.");
-    }
+//    default void f(){
+//        System.out.println("Interface I#f default.");
+//    }
 
     /**
      * staticメソッド
      */
-//    static void f(){
-//        System.out.println("Interface I#f static.");
-//    }
+    static void f(){
+        System.out.println("Interface I#f static.");
+    }
 }

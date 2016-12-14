@@ -21,10 +21,20 @@ public class Main {
     public static void main(String[] args) {
 
         IAndJImpl target = new IAndJImpl();
-        target.f();
+//        target.f();
+
+        I i = new IAndJImpl();
+//        i.f();
+
 
         SExtendsIImpl target2 = new SExtendsIImpl();
         target2.f();
+
+        I i2 = new SExtendsIImpl();
+//        i2.f();
+
+        S s = new SExtendsIImpl();
+        s.f();
 
     }
 

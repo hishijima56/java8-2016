@@ -37,9 +37,9 @@ public class IAndJImpl implements I, J {
      * 　本クラスで実装がない場合、本クラスのインスタンスメソッドの呼び出し部分でコンパイルエラー
      */
 
-        @Override
-        public void f() {
-            System.out.println("IAndJImpl#f ");
-        }
+//        @Override
+//        public void f() {
+//            System.out.println("IAndJImpl#f ");
+//        }
 
 }
