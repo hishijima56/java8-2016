@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch04.ex10.WebBrowserController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="267.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="348.0" minHeight="10.0" prefHeight="348.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane maxHeight="30.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="urlText" layoutX="5.0" layoutY="1.0" maxWidth="1.7976931348623157E308" onAction="#onEnter" prefHeight="23.0" prefWidth="590.0" />
+         </children>
+      </Pane>
+      <Pane maxHeight="30.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="backButton" layoutX="6.0" layoutY="2.0" mnemonicParsing="false" onAction="#backButtonClicked" text="戻る" />
+         </children>
+      </Pane>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <WebView fx:id="webBrowser" prefHeight="348.0" prefWidth="600.0" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
