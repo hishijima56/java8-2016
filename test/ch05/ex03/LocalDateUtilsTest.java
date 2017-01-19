@@ -6,7 +6,10 @@
 
 package ch05.ex03;
 
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+
+import java.time.LocalDate;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +35,8 @@ public class LocalDateUtilsTest {
      */
     @Test
     public void testNext() {
-        fail("まだ実装されていません"); // TODO
+        LocalDate today = LocalDate.of(2017,1,20);
+        assertThat(today.with(LocalDateUtils.next(w -> w.getDayOfWeek().getValue() < 6)),is(LocalDate.of(2017, 1, 23)));
     }
 
 }
