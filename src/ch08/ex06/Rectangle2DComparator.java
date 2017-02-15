@@ -23,5 +23,4 @@ public class Rectangle2DComparator implements Comparator<Rectangle2D> {
         return Comparator.comparing(Rectangle2D::getX).thenComparing(Rectangle2D::getY).thenComparing(Rectangle2D::getWidth)
                 .thenComparing(Rectangle2D::getHeight).compare(o1, o2);
     }
-
 }
