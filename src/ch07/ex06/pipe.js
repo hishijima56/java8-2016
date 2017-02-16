@@ -3,19 +3,12 @@
  * 練習問題07_06
  *
  */
-function pipe(args) {
-	print(args.length);
-	if (args.length > 0) {
-		$EXEC(args);
-		if (args.length > 1) {
-
-			for (index in args) {
-				$EXEC(args(index), $out);
-			}
-		}
+function pipe() {
+	for (var i = 0; i < arguments.length; i++) {
+		$EXEC(arguments[i], $OUT);
 	}
 }
 
-pipe('ls' , 'grep pipe', 'sort');
-
-print($out)
+pipe('java -version');
+// pipe('ls', 'sort');
+print($OUT)

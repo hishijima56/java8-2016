@@ -1,3 +1,4 @@
+#!/usr/bin/jjs -scripting
 /*
  * 練習問題07_09
  *
