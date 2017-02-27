@@ -17,14 +17,23 @@ public class FiltersAnswer {
 
     /**
      * Q1) Filterという名前をもつ関数型インタフェースがJava APIにはいくつありますか。
-     * A1)
+     * A1) 6個.
+     * java.io.FileFilter
+     * java.io.FileNameFilter
+     * java.nio.file.DirectoryStream.Filter
+     * java.util.logging.Filter
+     * javax.xml.stream.EventFilter
+     * javax.xml.stream.StreamFilter
      *
-     * Q2) そのつちどれがPredicate<T>よりも付加価値がありますか。
-     * A2)
+     * Q2) そのつちどれがPredicateよりも付加価値がありますか。
+     * A2)　java.io.FileNameFilter:引数を2個持つことができる(Predicateは1個)
      */
 
 
     /**
      * TODO ex03-04
      */
+    public static void main(String[] args) {
+    }
+
 }
