@@ -7,6 +7,7 @@
 package ch03.ex01;
 
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,6 +21,8 @@ import org.junit.Test;
  */
 public class OriginalLoggerText {
 
+    private Logger logger;
+
     private OriginalLogger originalLogger;
 
     /**
@@ -27,7 +30,9 @@ public class OriginalLoggerText {
      */
     @Before
     public void setUp() throws Exception {
-        originalLogger = new OriginalLogger();
+        logger = Logger.getGlobal();
+        logger.setLevel(Level.INFO);
+        originalLogger = new OriginalLogger(logger);
     }
 
     /**
