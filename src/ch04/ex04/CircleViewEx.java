@@ -15,7 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 /**
- * 練習門愛04_04
+ * 練習問題04_04
  * @author Hidetoshi Ishijima
  *
  * @version $Revision: $ $Date: $
