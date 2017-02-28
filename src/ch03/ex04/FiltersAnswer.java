@@ -31,7 +31,6 @@ public class FiltersAnswer {
 
 
     /**
-     * TODO ex03-04
      */
     public static void main(String[] args) {
     }
