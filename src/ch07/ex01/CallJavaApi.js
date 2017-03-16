@@ -4,5 +4,5 @@
  */
 //オブジェクトの生成
 var zonedDateTime = java.time.ZonedDateTime.now();
-//メソッド呼び出しと返り血の表示
+//メソッド呼び出しと返り値の表示
 print(zonedDateTime.toString());
