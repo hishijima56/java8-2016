@@ -23,7 +23,7 @@ public class ShowFriday13th {
     }
 
     private static void showAllFriday13th(){
-        LocalDate targetDate = LocalDate.of(1900, 1, 13);
+        LocalDate targetDate = LocalDate.of(1901, 1, 13);
         LocalDate endDate = targetDate.plusYears(100).minusDays(1);
         while(targetDate.compareTo(endDate) < 0){
             if(targetDate.getDayOfWeek() == DayOfWeek.FRIDAY){

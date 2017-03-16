@@ -75,6 +75,7 @@ public class CompareCountUpTime {
         }
         executor2.shutdown();
         executor2.awaitTermination(TIMEOUT_MINUTE, TimeUnit.MINUTES);
+        longAdderCounter.sum();
         finishTime = System.nanoTime();
         longAdderTime = finishTime - startTime;
 

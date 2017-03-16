@@ -30,7 +30,7 @@ public class ShowTimeZoneOffset {
     private static void showTimeZoneOffsetFiltered() {
         ZoneId.getAvailableZoneIds().stream().filter(z -> {
             int totalSeconds = ZoneId.of(z).getRules().getOffset(Instant.now()).getTotalSeconds();
-            return Math.abs(totalSeconds) < 3600;
-        }).forEach(System.out::println);
+            return (Math.abs(totalSeconds) % 3600 ) != 0;
+        }).forEach(s -> System.out.println(s + ": " + ZoneId.of(s).getRules().getOffset(Instant.now()).toString()));
     }
 }
