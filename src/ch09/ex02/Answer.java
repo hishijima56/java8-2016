@@ -4,7 +4,7 @@
  * $Date: $
 */
 
-package ch09.ex01;
+package ch09.ex02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
- * 練習問題09_01
+ * 練習問題09_02
  * @author Hidetoshi Ishijima
  *
  * @version $Revision: $ $Date: $
@@ -47,15 +47,16 @@ public class Answer {
             //PrintWriterのコンストラクタ
             out = new PrintWriter("out.txt");
         } catch (IOException e) {
-            e.printStackTrace();
+            //Scannerのオブジェクトが生成されているためcloseする
             try {
-                //Scannerのオブジェクトが生成されているためcloseする
                 in.close();
             } catch (Throwable t) {
-                t.printStackTrace();
+                e.addSuppressed(t);
             }
+            e.printStackTrace();
             throw e;
         }
+
         try {
             //本処理
             while (in.hasNext()) {
@@ -66,14 +67,16 @@ public class Answer {
                 //Scannerのclose
                 in.close();
             } catch (Throwable t) {
-                t.printStackTrace();
+                e.addSuppressed(t);
             }
             try {
                 //PrintWriterのclose
                 out.close();
-            } catch (Exception t) {
-                t.printStackTrace();
+            } catch (Throwable t) {
+                e.addSuppressed(t);
             }
+            e.printStackTrace();
+            throw e;
         }
 
         try {
@@ -82,12 +85,12 @@ public class Answer {
         } catch (Throwable t) {
             t.printStackTrace();
         }
+
         try {
             //PrintWriterのclose
             out.close();
-        } catch (Exception t) {
+        } catch (Throwable t) {
             t.printStackTrace();
         }
-
     }
 }
