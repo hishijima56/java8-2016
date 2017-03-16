@@ -38,14 +38,14 @@ public class Answer {
         PrintWriter out = null;
         try {
             // Scanner のコンストラクタ
-            in = new Scanner(Paths.get("words"));
+            in = new Scanner(Paths.get("./src/ch09/ex01/alice.txt"));
         } catch (IOException e) {
             e.printStackTrace();
             throw e;
         }
         try {
             //PrintWriterのコンストラクタ
-            out = new PrintWriter("out.txt");
+            out = new PrintWriter("./src/ch09/ex01/out.txt");
         } catch (IOException e) {
             e.printStackTrace();
             try {
