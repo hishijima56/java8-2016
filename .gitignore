@@ -3,3 +3,6 @@
 .settings/org.eclipse.jdt.core.prefs
 *.project
 *.classpath
+src/ch09/ex05/out.txt
+src/ch09/ex07/out.txt
+src/ch09/ex06/out.txt
