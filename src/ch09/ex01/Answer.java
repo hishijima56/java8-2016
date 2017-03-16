@@ -22,8 +22,9 @@ public class Answer {
 
     /**
      * @param args
+     * @throws IOException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //        try (Scanner in = new Scanner(Paths.get("words")); PrintWriter out = new PrintWriter("out.txt")) {
         //            while (in.hasNext()) {
@@ -37,28 +38,36 @@ public class Answer {
         PrintWriter out = null;
         try {
             in = new Scanner(Paths.get("words"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw e;
+        }
+        try {
             out = new PrintWriter("out.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+            try {
+                in.close();
+            } catch (Throwable t) {
+                t.printStackTrace();
+            }
+            throw e;
+        }
+        try {
             while (in.hasNext()) {
                 out.println(in.next().toLowerCase());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        out.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
+        } catch (Throwable t) {
+            try {
+                in.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                out.close();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-
     }
-
 }
